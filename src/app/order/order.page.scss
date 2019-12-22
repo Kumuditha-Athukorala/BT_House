@@ -1,0 +1,31 @@
+.bt-food-item-img{
+    max-height: 16vh;
+    max-width: 16vh;
+    overflow: hidden;
+}
+.bt-food-item-img-lable{
+    max-height: 16vh;
+    max-width: 16vh;
+    overflow: hidden;
+}
+.item-div{
+    width: 22vh;
+    height: 16vh;
+    margin-top: 5vh;
+    // border: inset 2px;
+}
+
+.order-para{
+    text-align: center;
+    font-size: medium;
+    margin-top: 10vh;
+}
+.total{
+    text-align: center;
+    font-size: medium;
+    margin-top: 2vh;
+    color: black;
+}
+.order-heading{
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{myItem.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img class="item-image1" src="{{myItem.image1}}" alt="" /><br>
+    <img class="item-images2" src="{{myItem.image2}}" alt="" /><br>
+    <img class="item-images3" src="{{myItem.image3}}" alt="" />
+    <ion-card-header>   
+      <ion-card-subtitle>{{myItem.name}}</ion-card-subtitle>
+      <ion-card-subtitle>{{myItem.type}}</ion-card-subtitle>
+      <ion-card-subtitle>{{myItem.meal}}</ion-card-subtitle>
+      <ion-card-subtitle>&euro;{{myItem.price}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="bt-para">
+        Botanic House Restaurant is located on 26 Botanic Road, Glasnevin, Dublin 9  near of Botanic Gardens. 
+        Produce sourced from the best Irish suppliers, great food and ambience at Botanic House Restaurant.
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button size="small" expand="block" (click)="orderNow(myItem)">Add to Order List</ion-button>
+
+  <ion-button size="small" expand="block" (click)="closeModel()">Back to Menu</ion-button>
+</ion-content>
+
+

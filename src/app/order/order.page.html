@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="order-heading">My Orders</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-sliding *ngFor="let item of myOrderList" >
+    <ion-item>
+      <ion-label class="bt-food-item-img-label" size="3">
+        <img class="bt-food-item-img" [src] = "item.image1"/>          
+      </ion-label>
+      <div class="item-div">
+        {{item.name}} <br>
+        &euro;{{" "}}{{item.price}}   
+      </div>            
+    </ion-item>     
+  </ion-item-sliding> 
+
+  <ion-label *ngIf="myOrderList.length != 0">
+  <ion-label> <p class="total">Total Amount:- &euro;  {{tot}}  </p> </ion-label>
+    <ion-button  size="small" expand="block" (click)="processOrder(myOrderList)"> Place Order </ion-button>
+  </ion-label>
+
+  <ion-label *ngIf="myOrderList.length == 0">
+    <p class="order-para">You haven't order any food item. </p>
+  </ion-label>
+ 
+ 
+</ion-content>
+<ion-footer>
+  <ion-button size="small" expand="block" (click)="closeOrderModel()">Back to Menu</ion-button>
+</ion-footer>

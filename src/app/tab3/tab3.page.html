@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="tab-two-header">
+      BT House Gallery
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-grid *ngFor="let item of imgItems">
+    <ion-row>
+      <ion-col>
+        <div (click)="previewImage(item.image1)"> <img class="galleryimg" [src] = "item.image1" /> </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="previewImage(item.image2)"> <img class="galleryimg" [src] = "item.image2" /> </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="previewImage(item.image3)"> <img class="galleryimg" [src] = "item.image3" /> </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

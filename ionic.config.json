@@ -1,0 +1,7 @@
+{
+  "name": "BT_House",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

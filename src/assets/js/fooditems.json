@@ -1,0 +1,24 @@
+{
+	"food": [
+	{
+	    "id": "0",
+		"name": "Botanic Chicken Wings",		
+		"price": 7.95,
+		"type" : "STARTERS",
+		"meal" : "anytime",
+		"image1":"./img/Ferrari-812.jpg",
+		"image2":"./img/Ferrari-812-2.jpg",
+		"image3":"./img/Ferrari-812-3.jpg"
+	}, 
+	{
+	    "id": "1",
+		"name": "Tikka Prawns",		
+		"price": 9.95,
+		"type" : "STARTERS",
+		"meal" : "dinner",
+		"image1":"./img/Ferrari-PistaSpider-1.jpg",
+		"image2":"./img/Ferrari-488-PistaSpider-2.jpg",
+		"image3":"./img/Ferrari-488-PistaSpider-3.jpg"
+	}
+   ]
+}

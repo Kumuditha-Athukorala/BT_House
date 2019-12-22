@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="tab-two-header">
+     Our Menu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding> 
+
+  <ion-card>
+    <img src="/assets/images/menu.jpg" alt="" />
+    <ion-card-header>
+      <ion-card-subtitle>BT House Menu</ion-card-subtitle>      
+    </ion-card-header>
+  
+    <ion-card-content class="menu-description">
+      We serve traditional Irish dishes with many varities such as Calassic Irish Meat, 
+      Starters, Irish Seafood mainly for Lunch and Dinner.
+      We have cash on delivery method now..!
+      <br>
+      Hurry...! 
+      <br>
+      Search and place your order...!
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-button size="small" expand="block" (click)="viewMyOrders()">View My Orders</ion-button>    
+      <ion-list-header class="list-header">Search Food Items</ion-list-header>
+    
+      <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-select placeholder="Select One" #fdType>
+          <ion-select-option  *ngFor="let type of uniqueType">{{type}}</ion-select-option> 
+                
+        </ion-select>
+      </ion-item>
+    
+      <ion-item >
+        <ion-label>Meal</ion-label>
+        <ion-select placeholder="Select One" #fdMeal>
+          <ion-select-option *ngFor="let mealTime of uniqueMeal">  {{mealTime}} </ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button id="btnSearch" size="small" expand="block" (click)="searchFood(fdType.value,fdMeal.value)">Search Food</ion-button> 
+    </ion-list>
+    
+    
+    <ion-item-sliding *ngFor="let item of items" >
+      <ion-item (click)="orderNow(item)">
+        <ion-label class="bt-food-item-img-label" size="3" >
+          <img class="bt-food-item-img" [src] = "item.image1"/>          
+        </ion-label>  
+        
+        <div class="item-div">
+          {{item.name}} <br>
+          &euro;{{" "}}{{item.price}}   
+        </div>
+        
+      </ion-item>
+      
+      <ion-item-options side="end">
+        <ion-item-option (click)="viewMore(item)">View More</ion-item-option>
+      </ion-item-options>  
+
+    </ion-item-sliding>  
+  
+
+  <ion-footer>
+    
+  </ion-footer>
+</ion-content>
